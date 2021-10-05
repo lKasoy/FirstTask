@@ -1,6 +1,6 @@
 package com.example.firsttask
 
-object InitItems {
+object ItemsHolder {
 
     val items: List<Item> by lazy {
         val mutableItems = mutableListOf<Item>()
@@ -12,7 +12,7 @@ object InitItems {
 
     fun getById(id: Int): Item {
         return items.first {
-            it.idValueView == id
+            it.id == id
         }
     }
 }

@@ -12,7 +12,7 @@ open class ItemAdapterKotlin(
 
     class ViewHolder(private val binding: ItemViewBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Item, onItemClick: (Item) -> Unit) {
-            binding.txtNameValue.text = item.nameValueView
+            binding.txtNameValue.text = item.name
             binding.root.setOnClickListener {
                 onItemClick(item)
             }

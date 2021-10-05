@@ -9,7 +9,7 @@
     android:padding="25dp">
 
         <TextView
-            android:id="@+id/txtIdValue"
+            android:id="@+id/txt_id"
             android:layout_width="match_parent"
             android:layout_height="30dp"
            />
@@ -17,11 +17,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:id="@+id/txtNameValueSecond"/>
+            android:id="@+id/txt_name"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:id="@+id/txtDescriptionValue"/>
+            android:id="@+id/txt_description"/>
 
 </LinearLayout>

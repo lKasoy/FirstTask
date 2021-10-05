@@ -7,11 +7,10 @@ import android.content.Intent
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
+import com.example.firsttask.Constants.CHANNEL_ID
+import com.example.firsttask.Constants.NOTIFICATION_CLICK
 
 class ForegroundService : Service() {
-
-    private val NOTIFICATION_CLICK = "com.example.firsttask.NOTIFICATION_CLICK"
-    private val CHANNEL_ID = "ForegroundService Kotlin"
 
     companion object {
         fun startService(context: Context) {

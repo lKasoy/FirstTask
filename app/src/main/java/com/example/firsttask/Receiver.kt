@@ -3,10 +3,9 @@ package com.example.firsttask
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import com.example.firsttask.Constants.SAVED_ITEM_ID
 
 class Receiver : BroadcastReceiver() {
-
-    val SAVED_ITEM_ID = "item_id"
 
     override fun onReceive(context: Context, intent: Intent) {
         val sharedPrefs = context.getSharedPreferences("items_prefs", -1)

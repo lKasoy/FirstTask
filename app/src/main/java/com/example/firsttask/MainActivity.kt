@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.firsttask.Constants.ID
 import com.example.firsttask.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -22,21 +23,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startActivityFromReceiver() {
-        if (intent.hasExtra("id")) {
-            val id = intent.extras?.getInt("id") ?: -1
+        if (intent.hasExtra(ID)) {
+            val id = intent.extras?.getInt(ID) ?: -1
             if (id != -1) {
                 val itemIntent = Intent(this, SecondActivity::class.java)
-                itemIntent.putExtra("id", id)
+                itemIntent.putExtra(ID, id)
                 startActivity(itemIntent)
             }
         }
     }
 
     private fun initRecycler() {
-        val adapter = ItemAdapterKotlin(InitItems.items)
+        val adapter = ItemAdapterKotlin(ItemsHolder.items)
         { itemId: Item ->
             val itemIntent = Intent(this, SecondActivity::class.java)
-            itemIntent.putExtra("id", itemId.idValueView)
+            itemIntent.putExtra(ID, itemId.id)
             startActivity(itemIntent)
         }
         binding.rclItems.adapter = adapter
