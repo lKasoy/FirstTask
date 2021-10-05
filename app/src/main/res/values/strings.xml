@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FirstTask</string>
+    <string name="notification_title">title</string>
+    <string name="notification_message">message</string>
+    <string name="ticker_text">ticker</string>
+
+
+</resources>
